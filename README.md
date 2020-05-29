@@ -23,10 +23,6 @@ samples, guidance on mobile development, and a full API reference.
 
 ![screen](https://github.com/Anna-Myzukina/helloflutter/blob/master/img/11.png)
 
-## Description
-
-Lorem ipsum ....
-
 
 ## Available Scripts
 
@@ -64,12 +60,6 @@ You can get started building React apps for free on Heroku.
 - [ ] Users can do different activities.
 
 
-## Environment
- - [ ] "version": "0.1.0",
- - [ ] "private": true,
- - [ ]
- - [ ] 
- - [ ]
 
 ## Show your support
 
