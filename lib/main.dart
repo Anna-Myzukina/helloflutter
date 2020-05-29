@@ -31,7 +31,7 @@ class _MyPageState extends State<MyApp> {
       appBar: new AppBar(
         title: new Text("Tapp anywhere on the screen",
                style: new TextStyle(fontFamily: 'Lato-Regular',
-               fontSize: 32.0
+               fontSize: 22.0
                ),
         ),
       ),
