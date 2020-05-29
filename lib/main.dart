@@ -1,69 +1,56 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MaterialApp(home: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Hello flutter',
-      theme: ThemeData(
-        primarySwatch: Colors.orange,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(title: 'Annas first project'),
-    );
+  _MyPageState createState() => new _MyPageState();
+}
+
+class _MyPageState extends State<MyApp> {
+  final Random _random = Random();
+
+  Color _color = Color(0xFFFFFFFF);
+
+  void changeColor() {
+    setState(() {
+      _color = Color.fromARGB(
+        _random.nextInt(256),
+        _random.nextInt(256),
+        _random.nextInt(256),
+        _random.nextInt(256),
+      );
+    });
   }
-}
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
-  final String title;
-
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    List<Color> manyColors = [
-      Colors.red,
-      Colors.green, 
-      Colors.blue, 
-      Colors.yellow,
-      Colors.brown,
-      Colors.indigo,
-      Colors.orange,
-      Colors.purple,
-      Colors.pink
-       ];
     return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
+      appBar: new AppBar(
+        title: new Text("Tapp anywhere on the screen",
+               style: new TextStyle(fontFamily: 'LobsterTwo',
+               fontSize: 32.0
+               ),
+        ),
       ),
-      body: Container(
+      body: InkWell(
+        onTap: changeColor,
         child: Container(
-          color: Colors.red,
-          margin: EdgeInsets.all(10),
-          padding: EdgeInsets.all(10),
-          width: 200,
-          height: 200,
+          color: _color,
           child: Center(
             child: Text(
-              "My Text",
+              "Hey There",
               style: TextStyle(fontSize: 60.0, 
               fontStyle: FontStyle.italic,
+              color: Colors.blue,
               ),
               textAlign: TextAlign.center,
               ),
-            ),
-          
-        )
-        
-      
+            ),     
+        ),
       ),
     );
   }
