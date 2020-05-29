@@ -12,8 +12,7 @@ class MyApp extends StatefulWidget {
 
 class _MyPageState extends State<MyApp> {
   final Random _random = Random();
-
-  Color _color = Color(0xFFFFFFFF);
+  Color _color = Colors.orange;
 
   void changeColor() {
     setState(() {
@@ -31,7 +30,7 @@ class _MyPageState extends State<MyApp> {
     return Scaffold(
       appBar: new AppBar(
         title: new Text("Tapp anywhere on the screen",
-               style: new TextStyle(fontFamily: 'LobsterTwo',
+               style: new TextStyle(fontFamily: 'Lato-Regular',
                fontSize: 32.0
                ),
         ),
@@ -44,6 +43,7 @@ class _MyPageState extends State<MyApp> {
             child: Text(
               "Hey There",
               style: TextStyle(fontSize: 60.0, 
+              fontFamily: 'LobsterTwo',
               fontStyle: FontStyle.italic,
               color: Colors.blue,
               ),
