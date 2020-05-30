@@ -12,7 +12,7 @@ class MyApp extends StatefulWidget {
 
 class _MyPageState extends State<MyApp> {
   final Random _random = Random();
-  Color _color = Colors.orange;
+  Color _color = Color.fromARGB(255,7,78,154);
 
   void changeColor() {
     setState(() {
@@ -42,12 +42,20 @@ class _MyPageState extends State<MyApp> {
           child: Center(
             child: Text(
               "Hey There",
-              style: TextStyle(fontSize: 60.0, 
-              fontFamily: 'LobsterTwo',
-              fontStyle: FontStyle.italic,
-              color: Colors.blue,
-              ),
               textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 60.0, 
+                fontFamily: 'LobsterTwo',
+                fontStyle: FontStyle.italic,
+                color: Colors.blue,
+                shadows: [
+                  Shadow(
+                    blurRadius: 10.0,
+                    color: Colors.blue,
+                    offset: Offset(5.0, 5.0),
+                  ),
+                ],
+               ),
               ),
             ),     
         ),
