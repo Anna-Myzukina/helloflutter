@@ -1,6 +1,9 @@
 # helloflutter
 
+## Description
+
 A new Flutter project.
+The application should: display the text "Hey there" in the middle of the screen and after tapping anywhere on the screen a background color should be changed to a random color. 
 
 ## Getting Started
 
@@ -18,11 +21,7 @@ samples, guidance on mobile development, and a full API reference.
 
 ## Live version [helloflutter]()
 
-![screen](#)
-
-## Description
-
-Lorem ipsum ....
+![screen](https://github.com/Anna-Myzukina/helloflutter/blob/master/img/11.png)
 
 
 ## Available Scripts
@@ -61,12 +60,6 @@ You can get started building React apps for free on Heroku.
 - [ ] Users can do different activities.
 
 
-## Environment
- - [ ] "version": "0.1.0",
- - [ ] "private": true,
- - [ ]
- - [ ] 
- - [ ]
 
 ## Show your support
 
